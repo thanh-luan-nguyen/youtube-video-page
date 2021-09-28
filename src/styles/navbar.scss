@@ -1,0 +1,126 @@
+:root{
+  --navbar-bgclr: #202020;
+  --form-bgclr: #353535;
+  --magnify-bgclr: #313131;
+  --input-bgclr: #121212;
+  --mic-bgclr: #181818;
+}
+
+
+nav{
+  height: 56px;
+  padding-inline: 16px;
+  background: var(--navbar-bgclr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .navbar-icon{
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    svg{
+      fill: white;
+    }
+  }
+
+  #start{
+    display: flex;
+    .navbar-icon{
+      &.burger{
+        height: 40px;
+        width: 40px;
+        padding: 8px;
+      }
+      &.premium{
+        width: 127px;
+        svg{
+          height: 20px;
+          width: 97px;
+        }
+      }
+    }
+  }
+
+  #middle {
+    display: flex;
+    align-items: center;
+    flex-basis: 728px;
+    column-gap: 5px;
+    margin-left: 40px;
+    @media screen and(max-width: 656px){
+      margin-left: unset;
+    }
+    form {
+      border-radius: 2px;
+      padding-inline: 4px;
+      height: 32px;
+      display:flex;
+      justify-content: flex-end;
+      flex-grow: 1;
+      padding: 1px;
+      @media screen and(max-width: 656px){
+        background: var(--navbar-bgclr);
+      }
+      input{
+        font-size: inherit;
+        font-weight: 300;
+        width: 100%;
+        background: var(--input-bgclr);
+        border: 1px solid var(--magnify-bgclr);
+        outline: none;
+        padding-inline: 10px;
+        @media screen and(max-width: 656px){
+          display:none;
+          // background: var(--navbar-bgclr);
+        }
+      }
+      .navbar-icon.magnify {
+        background: var(--magnify-bgclr);
+        flex-shrink: 0;
+        width: 65px;
+        @media screen and(max-width: 656px){
+          width: 35px;
+          background: var(--nav-bgclr);
+        }
+        svg {
+          stroke: var(--form-bgclr);
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+    .navbar-icon.mic {
+      flex-shrink: 0;
+      background: var(--mic-bgclr);
+      border-radius: 50%;
+      height: 36px;
+      width: 36px;
+      padding: 6px;
+      @media screen and(max-width: 656px){
+        background: var(--nav-bgclr);
+      }
+    }
+  }
+  #end{
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .navbar-icon{
+      height: 40px;
+      width: 40px;
+      padding: 8px;
+      &.avatar {
+        height: 40px;
+        width: 60px;
+        padding: 1px 6px;
+        img{
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

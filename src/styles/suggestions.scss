@@ -1,0 +1,106 @@
+section#suggestions-section {
+  // #tags-slideshow {
+  //   display: flex;
+  //   font: 14px;
+  //   color: white;
+  //   .tag {
+  //     margin: 8px 8px 8px 0;
+  //     padding-inline: 12px;
+  //     height: 32px;
+  //     border-radius: 16px;
+  //     border: white 1px solid;
+  //     display: inline-flex;
+  //   }
+  // }
+  #video-suggestions {
+    display: flex;
+    flex-flow: column;
+    row-gap: 8px;
+    .suggestion {
+      height: 94px;
+      display: flex;
+      position: relative;
+      &:hover{
+        cursor: pointer;
+        .three-dots-vertical {
+          display: block;
+        }
+      }
+      .preview-image {
+        .image {
+          position: relative;
+          width: 168px;
+          height: 94px;
+          margin-right: 8px;
+          img {
+            width: inherit;
+            height: inherit;
+          }
+          .duration {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 4px;
+            padding: 3px 4px;
+            font-size: 12px; 
+            color: white;
+            background: #000000cc;
+            border-radius: 3px;
+            font-weight: 500;
+          }
+        }
+      }
+      .side-details {
+        // flex-grow: 1;
+        // padding-right: 24px;
+        .title,.channel {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .title {
+          -webkit-line-clamp: 2;
+          line-height: 20px;
+          font-size: 14px;
+          margin-bottom: 4px;
+          color: white;
+          font-weight: 500;
+        }
+        .channel, .views-when{
+          color: #aaa;
+          font-size: 12px;
+          height: 18px;
+          line-height: 18px;
+        }
+        .channel {
+          -webkit-line-clamp: 1
+        }
+        .views-when {
+          span {
+            display: inline-block;
+          }
+        }
+      }
+      .three-dots-vertical {
+        height: 24px;
+        width: 24px;
+        fill: white;
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  #show-more {
+    font-size: 14px;
+    width: 100%;
+    background-color: #181818;
+    border: 1px solid #3ea6ff;
+    color: #3ea6ff;
+    padding-block: 9px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
